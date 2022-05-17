@@ -5,11 +5,6 @@ public class Launch {
 
     public static void main(String[] args) {
         new SplashScreen(splashDuration).showSplash();
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new MainUI("Test Splash Screen");
-            }
-        });
+        SwingUtilities.invokeLater(() -> new MainUI("Test Splash Screen"));
     }
 }
